@@ -19,3 +19,27 @@ int main(){
     else cout<<"not prime"<< endl;
     return 0;
 }
+
+
+//method 2 easier
+
+#include <bits/stdc++.h>
+using namespace std;
+bool isPrime(int n){
+    if(n<=1) return false;
+    else if(n==2) return true;
+    else if(n%2==0) return false;
+    else{
+        for(int i=3;i*i<=n;i+=2){
+            if(n%i==0) return false;
+        }
+    }
+    return true;
+}
+ int main(){
+    int n;
+    cin>> n;
+    if(isPrime(n)) cout<<"prime"<<endl;
+    else cout<<"not prime"<<endl;
+    return 0;
+ }
